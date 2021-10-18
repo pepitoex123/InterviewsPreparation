@@ -10,7 +10,11 @@ function findTarget(arrayToLookUp,target){
                 break;
             }
         }
-        return returnIndices;
+        if(returnIndices.length > 0){
+            return returnIndices;
+        }else{
+            return null
+        }
     }else{
         return "The parameter is either not an array or doesn't have all its values as integer";
     }
